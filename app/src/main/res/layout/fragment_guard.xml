@@ -1,0 +1,131 @@
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/liteGray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Title"
+        android:text="@string/security"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/diemen16sp"
+        android:layout_margin="@dimen/dimen16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/pnikcard"
+        android:layout_margin="@dimen/dimen16"
+        app:cardCornerRadius="@dimen/dimen16"
+        app:cardBackgroundColor="@color/pink"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="@dimen/dimen16"
+        app:cardElevation="@dimen/dimen16"
+        app:layout_constraintTop_toBottomOf="@id/Title"
+
+        />
+
+    <TextView
+        android:id="@+id/textSOS"
+        app:layout_constraintTop_toTopOf="@id/pnikcard"
+        app:layout_constraintStart_toStartOf="@id/pnikcard"
+        android:layout_width="wrap_content"
+        android:elevation="@dimen/dimen16"
+        android:layout_height="wrap_content"
+        android:text="@string/sos"
+        android:textSize="24sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/dimen16"
+        />
+    <TextView
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sosmsg"
+        android:text="@string/in_case_of_emergency_keep_telling_family_members_by_contact_me"
+        android:textColor="#fff"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/textSOS"
+        android:elevation="@dimen/dimen16"
+        app:layout_constraintStart_toStartOf="@id/pnikcard"
+        android:layout_margin="@dimen/dimen16"
+        app:layout_constraintEnd_toStartOf="@id/sosimag"
+        />
+    <ImageView
+        android:id="@+id/sosimag"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sos"
+        app:layout_constraintEnd_toEndOf="@id/pnikcard"
+        android:elevation="@dimen/dimen16"
+        android:layout_margin="@dimen/dimen16"
+        app:layout_constraintTop_toTopOf="@id/pnikcard"
+        app:layout_constraintBottom_toBottomOf="@id/pnikcard"
+
+        />
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/greencard"
+        android:layout_margin="@dimen/dimen16"
+        app:cardCornerRadius="@dimen/dimen16"
+        app:cardBackgroundColor="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:cardElevation="@dimen/dimen16"
+        app:layout_constraintTop_toBottomOf="@id/pnikcard"/>
+
+    <TextView
+        android:id="@+id/textGuard"
+        app:layout_constraintTop_toTopOf="@id/greencard"
+        app:layout_constraintStart_toStartOf="@id/greencard"
+        android:layout_width="wrap_content"
+        android:elevation="@dimen/dimen16"
+        android:layout_height="wrap_content"
+        android:text="@string/guard"
+        android:textSize="24sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/dimen16"
+        />
+    <TextView
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sosguard"
+        android:text="@string/open_when_you_are_on_a_potentially_dangwrous_journey"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/textGuard"
+        android:elevation="@dimen/dimen16"
+        app:layout_constraintStart_toStartOf="@id/greencard"
+        android:layout_margin="@dimen/dimen16"
+        app:layout_constraintEnd_toStartOf="@id/guardimag"
+        android:textStyle="bold"
+        />
+    <ImageView
+        android:id="@+id/guardimag"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/guard"
+        app:layout_constraintEnd_toEndOf="@id/greencard"
+        android:elevation="@dimen/dimen16"
+        android:layout_margin="@dimen/dimen16"
+        app:layout_constraintTop_toTopOf="@id/greencard"
+        app:layout_constraintBottom_toBottomOf="@id/greencard"/>
+
+
+
+    <!--   This is for Botttom navigation will creat menu and xml file that-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
